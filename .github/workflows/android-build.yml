@@ -34,8 +34,8 @@ jobs:
     - name: Grant Gradle execute permission
       run: chmod +x android/gradlew
 
-    - name: Sync Capacitor Native Assets
-      run: npx cap sync android
+    - name: Copy Web Assets to Android
+      run: npx cap copy android
 
     - name: Build Android APK
       working-directory: ./android
