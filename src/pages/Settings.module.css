@@ -1,0 +1,322 @@
+.mainContainer {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  padding-inline: 1.5rem;
+  max-width: 48rem;
+  margin-inline: auto;
+  min-height: 100vh;
+}
+
+.heroSection {
+  margin-bottom: 2.5rem;
+}
+
+.heroLabel {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.heroTitle {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: 2.25rem;
+  letter-spacing: -0.025em;
+  color: var(--color-on-surface);
+}
+
+.settingsGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.groupSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.groupTitle {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-on-surface);
+}
+
+.groupCard {
+  background-color: var(--color-surface-container);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.settingRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .settingRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.settingTitle {
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.settingDesc {
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+  margin-top: 0.25rem;
+}
+
+.segmentedControl {
+  background-color: var(--color-surface-container-low);
+  padding: 0.25rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .segmentedControl {
+    width: auto;
+  }
+}
+
+.segmentBtn {
+  flex: 1;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  color: var(--color-on-surface-variant);
+  transition: all 0.2s ease-in-out;
+}
+
+.segmentBtn:hover {
+  color: var(--color-on-surface);
+}
+
+.segmentBtnActive {
+  flex: 1;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  background-color: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.prefsCard {
+  background-color: var(--color-surface-container);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.prefRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  transition: background-color 0.3s;
+  border-top: 1px solid rgba(165,165,255, 0.05); /* Slight tint for border */
+}
+
+.prefRow:first-child {
+  border-top: none;
+}
+
+.prefRow:hover {
+  background-color: var(--color-surface-bright);
+}
+
+.prefLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.prefIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-color: var(--color-surface-container-high);
+  color: var(--color-primary);
+  transition: all 0.3s;
+}
+
+.prefRow:hover .prefIcon {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary-fixed);
+}
+
+.prefRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-on-surface-variant);
+}
+
+/* Sound dropdown styling */
+.soundSelect {
+  background-color: transparent;
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid rgba(165, 165, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  /* Custom arrow */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+  padding-right: 2rem;
+  transition: border-color 0.2s;
+}
+
+.soundSelect:hover {
+  border-color: var(--color-primary);
+}
+
+.soundSelect option {
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+/* Toggle specific */
+.toggleWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggleInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.toggleTrack {
+  width: 3rem;
+  height: 1.5rem;
+  background-color: var(--color-surface-container-highest);
+  border-radius: 9999px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.toggleTrack::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  transition: all 0.3s;
+}
+
+.toggleInput:checked + .toggleTrack {
+  background-color: var(--color-primary-fixed);
+}
+
+.toggleInput:checked + .toggleTrack::after {
+  transform: translateX(1.5rem);
+  border-color: #fff;
+}
+
+.accountGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .accountGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.accountCard, .signOutCard {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+@media (min-width: 768px) {
+  .accountCard, .signOutCard {
+    aspect-ratio: auto;
+    min-height: 10rem;
+  }
+}
+
+.accountCard {
+  background-color: var(--color-surface-container);
+}
+
+.accountCard:hover {
+  background-color: var(--color-surface-bright);
+}
+
+.signOutCard {
+  background-color: var(--color-surface-container-highest);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.signOutCard:hover {
+  background-color: var(--color-surface-bright);
+}
+
+.accountTitle {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-on-surface);
+}
+
+.accountDesc {
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+}
