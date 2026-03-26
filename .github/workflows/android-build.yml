@@ -35,7 +35,14 @@ jobs:
       run: chmod +x android/gradlew
 
     - name: Copy Web Assets to Android
-      run: npx cap copy android
+      run: npx cap copy android > cap-debug.log 2>&1
+
+    - name: Upload Cap Debug Logs
+      uses: actions/upload-artifact@v4
+      if: failure()
+      with:
+        name: capacitor-debug-log
+        path: cap-debug.log
 
     - name: Build Android APK
       working-directory: ./android
